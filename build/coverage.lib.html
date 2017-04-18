@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-react-native-cli/react-native-cli/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-react-native-cli/node_modules/react-native-cli/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-react-native-cli">npmtest-react-native-cli (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-react-native-cli/react-native-cli/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-react-native-cli/node_modules/react-native-cli/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">26.98% <small>(34 / 126)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-react-native-cli/react-native-cli/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-react-native-cli/node_modules/react-native-cli/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -942,8 +944,8 @@ var CLI_MODULE_PATH = function() {
   );
 };
 &nbsp;
-var REACT_NATIVE_PACKAGE_JSON_PATH = <span class="fstat-no" title="function not covered">function() {</span>
-<span class="cstat-no" title="statement not covered">  return path.resolve(</span>
+var REACT_NATIVE_PACKAGE_JSON_PATH = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >  return path.resolve(</span>
     process.cwd(),
     'node_modules',
     'react-native',
@@ -951,49 +953,49 @@ var REACT_NATIVE_PACKAGE_JSON_PATH = <span class="fstat-no" title="function not 
   );
 };
 &nbsp;
-<span class="missing-if-branch" title="if path not taken">I</span>if (options._.length === 0 &amp;&amp; (options.v || options.version)) {
-<span class="cstat-no" title="statement not covered">  printVersionsAndExit(REACT_NATIVE_PACKAGE_JSON_PATH());</span>
+<span class="missing-if-branch" title="if path not taken" >I</span>if (options._.length === 0 &amp;&amp; (options.v || options.version)) {
+<span class="cstat-no" title="statement not covered" >  printVersionsAndExit(REACT_NATIVE_PACKAGE_JSON_PATH());</span>
 }
 &nbsp;
 // Use Yarn if available, it's much faster than the npm client.
 // Return the version of yarn installed on the system, null if yarn is not available.
-<span class="fstat-no" title="function not covered">function getYarnVersionIfAvailable() {</span>
-<span class="cstat-no" title="statement not covered">  var yarnVersion;</span>
-<span class="cstat-no" title="statement not covered">  try {</span>
+<span class="fstat-no" title="function not covered" >function getYarnVersionIfAvailable() {</span>
+<span class="cstat-no" title="statement not covered" >  var yarnVersion;</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
     // execSync returns a Buffer -&gt; convert to string
-<span class="cstat-no" title="statement not covered">    if (process.platform.startsWith('win')) {</span>
-<span class="cstat-no" title="statement not covered">      yarnVersion = (execSync('yarn --version').toString() || '').trim();</span>
+<span class="cstat-no" title="statement not covered" >    if (process.platform.startsWith('win')) {</span>
+<span class="cstat-no" title="statement not covered" >      yarnVersion = (execSync('yarn --version').toString() || '').trim();</span>
     } else {
-<span class="cstat-no" title="statement not covered">      yarnVersion = (execSync('yarn --version 2&gt;/dev/null').toString() || '').trim();</span>
+<span class="cstat-no" title="statement not covered" >      yarnVersion = (execSync('yarn --version 2&gt;/dev/null').toString() || '').trim();</span>
     }
   } catch (error) {
-<span class="cstat-no" title="statement not covered">    return null;</span>
+<span class="cstat-no" title="statement not covered" >    return null;</span>
   }
   // yarn &lt; 0.16 has a 'missing manifest' bug
-<span class="cstat-no" title="statement not covered">  try {</span>
-<span class="cstat-no" title="statement not covered">    if (semver.gte(yarnVersion, '0.16.0')) {</span>
-<span class="cstat-no" title="statement not covered">      return yarnVersion;</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    if (semver.gte(yarnVersion, '0.16.0')) {</span>
+<span class="cstat-no" title="statement not covered" >      return yarnVersion;</span>
     } else {
-<span class="cstat-no" title="statement not covered">      return null;</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
     }
   } catch (error) {
-<span class="cstat-no" title="statement not covered">    console.error('Cannot parse yarn version: ' + yarnVersion);</span>
-<span class="cstat-no" title="statement not covered">    return null;</span>
+<span class="cstat-no" title="statement not covered" >    console.error('Cannot parse yarn version: ' + yarnVersion);</span>
+<span class="cstat-no" title="statement not covered" >    return null;</span>
   }
 }
 &nbsp;
 var cli;
 var cliPath = CLI_MODULE_PATH();
-<span class="missing-if-branch" title="if path not taken">I</span>if (fs.existsSync(cliPath)) {
-<span class="cstat-no" title="statement not covered">  cli = require(cliPath);</span>
+<span class="missing-if-branch" title="if path not taken" >I</span>if (fs.existsSync(cliPath)) {
+<span class="cstat-no" title="statement not covered" >  cli = require(cliPath);</span>
 }
 &nbsp;
 var commands = options._;
-<span class="missing-if-branch" title="if path not taken">I</span>if (cli) {
-<span class="cstat-no" title="statement not covered">  cli.run();</span>
+<span class="missing-if-branch" title="if path not taken" >I</span>if (cli) {
+<span class="cstat-no" title="statement not covered" >  cli.run();</span>
 } else {
-  <span class="missing-if-branch" title="if path not taken">I</span>if (options._.length === 0 &amp;&amp; (options.h || options.help)) {
-<span class="cstat-no" title="statement not covered">    console.log([</span>
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (options._.length === 0 &amp;&amp; (options.h || options.help)) {
+<span class="cstat-no" title="statement not covered" >    console.log([</span>
       '',
       '  Usage: react-native [command] [options]',
       '',
@@ -1008,10 +1010,10 @@ var commands = options._;
       '    -v, --version output the version number',
       '',
     ].join('\n'));
-<span class="cstat-no" title="statement not covered">    process.exit(0);</span>
+<span class="cstat-no" title="statement not covered" >    process.exit(0);</span>
   }
 &nbsp;
-  <span class="missing-if-branch" title="else path not taken">E</span>if (commands.length === 0) {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (commands.length === 0) {
     console.error(
       'You did not pass any commands, run `react-native --help` to see a list of all available commands.'
     );
@@ -1019,16 +1021,16 @@ var commands = options._;
   }
 &nbsp;
   switch (commands[0]) {
-<span class="branch-0 cbranch-no" title="branch not covered">  case 'init':</span>
-<span class="cstat-no" title="statement not covered">    if (!commands[1]) {</span>
-<span class="cstat-no" title="statement not covered">      console.error(</span>
+<span class="branch-0 cbranch-no" title="branch not covered" >  case 'init':</span>
+<span class="cstat-no" title="statement not covered" >    if (!commands[1]) {</span>
+<span class="cstat-no" title="statement not covered" >      console.error(</span>
         'Usage: react-native init &lt;ProjectName&gt; [--verbose]'
       );
-<span class="cstat-no" title="statement not covered">      process.exit(1);</span>
+<span class="cstat-no" title="statement not covered" >      process.exit(1);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      init(commands[1], options);</span>
+<span class="cstat-no" title="statement not covered" >      init(commands[1], options);</span>
     }
-<span class="cstat-no" title="statement not covered">    break;</span>
+<span class="cstat-no" title="statement not covered" >    break;</span>
   default:
     console.error(
       'Command `%s` unrecognized. ' +
@@ -1040,23 +1042,23 @@ var commands = options._;
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function validateProjectName(name) {</span>
-<span class="cstat-no" title="statement not covered">  if (!name.match(/^[$A-Z_][0-9A-Z_$]*$/i)) {</span>
-<span class="cstat-no" title="statement not covered">    console.error(</span>
+<span class="fstat-no" title="function not covered" >function validateProjectName(name) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!name.match(/^[$A-Z_][0-9A-Z_$]*$/i)) {</span>
+<span class="cstat-no" title="statement not covered" >    console.error(</span>
       '"%s" is not a valid name for a project. Please use a valid identifier ' +
         'name (alphanumeric).',
       name
     );
-<span class="cstat-no" title="statement not covered">    process.exit(1);</span>
+<span class="cstat-no" title="statement not covered" >    process.exit(1);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (name === 'React') {</span>
-<span class="cstat-no" title="statement not covered">    console.error(</span>
+<span class="cstat-no" title="statement not covered" >  if (name === 'React') {</span>
+<span class="cstat-no" title="statement not covered" >    console.error(</span>
       '"%s" is not a valid name for a project. Please do not use the ' +
         'reserved word "React".',
       name
     );
-<span class="cstat-no" title="statement not covered">    process.exit(1);</span>
+<span class="cstat-no" title="statement not covered" >    process.exit(1);</span>
   }
 }
 &nbsp;
@@ -1067,20 +1069,20 @@ var commands = options._;
  * @param options.npm If true, always use the npm command line client,
  *                       don't use yarn even if available.
  */
-<span class="fstat-no" title="function not covered">function init(name, options) {</span>
-<span class="cstat-no" title="statement not covered">  validateProjectName(name);</span>
+<span class="fstat-no" title="function not covered" >function init(name, options) {</span>
+<span class="cstat-no" title="statement not covered" >  validateProjectName(name);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (fs.existsSync(name)) {</span>
-<span class="cstat-no" title="statement not covered">    createAfterConfirmation(name, options);</span>
+<span class="cstat-no" title="statement not covered" >  if (fs.existsSync(name)) {</span>
+<span class="cstat-no" title="statement not covered" >    createAfterConfirmation(name, options);</span>
   } else {
-<span class="cstat-no" title="statement not covered">    createProject(name, options);</span>
+<span class="cstat-no" title="statement not covered" >    createProject(name, options);</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function createAfterConfirmation(name, options) {</span>
-<span class="cstat-no" title="statement not covered">  prompt.start();</span>
+<span class="fstat-no" title="function not covered" >function createAfterConfirmation(name, options) {</span>
+<span class="cstat-no" title="statement not covered" >  prompt.start();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var property = {</span>
+<span class="cstat-no" title="statement not covered" >  var property = {</span>
     name: 'yesno',
     message: 'Directory ' + name + ' already exists. Continue?',
     validator: /y[es]*|n[o]?/,
@@ -1088,30 +1090,30 @@ var commands = options._;
     default: 'no'
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered">  prompt.get(property, <span class="fstat-no" title="function not covered">function (err, result) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (result.yesno[0] === 'y') {</span>
-<span class="cstat-no" title="statement not covered">      createProject(name, options);</span>
+<span class="cstat-no" title="statement not covered" >  prompt.get(property, <span class="fstat-no" title="function not covered" >function (err, result) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (result.yesno[0] === 'y') {</span>
+<span class="cstat-no" title="statement not covered" >      createProject(name, options);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      console.log('Project initialization canceled');</span>
-<span class="cstat-no" title="statement not covered">      process.exit();</span>
+<span class="cstat-no" title="statement not covered" >      console.log('Project initialization canceled');</span>
+<span class="cstat-no" title="statement not covered" >      process.exit();</span>
     }
   });
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function createProject(name, options) {</span>
-<span class="cstat-no" title="statement not covered">  var root = path.resolve(name);</span>
-<span class="cstat-no" title="statement not covered">  var projectName = path.basename(root);</span>
+<span class="fstat-no" title="function not covered" >function createProject(name, options) {</span>
+<span class="cstat-no" title="statement not covered" >  var root = path.resolve(name);</span>
+<span class="cstat-no" title="statement not covered" >  var projectName = path.basename(root);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  console.log(</span>
+<span class="cstat-no" title="statement not covered" >  console.log(</span>
     'This will walk you through creating a new React Native project in',
     root
   );
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!fs.existsSync(root)) {</span>
-<span class="cstat-no" title="statement not covered">    fs.mkdirSync(root);</span>
+<span class="cstat-no" title="statement not covered" >  if (!fs.existsSync(root)) {</span>
+<span class="cstat-no" title="statement not covered" >    fs.mkdirSync(root);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var packageJson = {</span>
+<span class="cstat-no" title="statement not covered" >  var packageJson = {</span>
     name: projectName,
     version: '0.0.1',
     private: true,
@@ -1119,72 +1121,72 @@ var commands = options._;
       start: 'node node_modules/react-native/local-cli/cli.js start'
     }
   };
-<span class="cstat-no" title="statement not covered">  fs.writeFileSync(path.join(root, 'package.json'), JSON.stringify(packageJson));</span>
-<span class="cstat-no" title="statement not covered">  process.chdir(root);</span>
+<span class="cstat-no" title="statement not covered" >  fs.writeFileSync(path.join(root, 'package.json'), JSON.stringify(packageJson));</span>
+<span class="cstat-no" title="statement not covered" >  process.chdir(root);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  run(root, projectName, options);</span>
+<span class="cstat-no" title="statement not covered" >  run(root, projectName, options);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function getInstallPackage(rnPackage) {</span>
-<span class="cstat-no" title="statement not covered">  var packageToInstall = 'react-native';</span>
-<span class="cstat-no" title="statement not covered">  var isValidSemver = semver.valid(rnPackage);</span>
-<span class="cstat-no" title="statement not covered">  if (isValidSemver) {</span>
-<span class="cstat-no" title="statement not covered">    packageToInstall += '@' + isValidSemver;</span>
-  } else <span class="cstat-no" title="statement not covered">if (rnPackage) {</span>
+<span class="fstat-no" title="function not covered" >function getInstallPackage(rnPackage) {</span>
+<span class="cstat-no" title="statement not covered" >  var packageToInstall = 'react-native';</span>
+<span class="cstat-no" title="statement not covered" >  var isValidSemver = semver.valid(rnPackage);</span>
+<span class="cstat-no" title="statement not covered" >  if (isValidSemver) {</span>
+<span class="cstat-no" title="statement not covered" >    packageToInstall += '@' + isValidSemver;</span>
+  } else <span class="cstat-no" title="statement not covered" >if (rnPackage) {</span>
     // for tar.gz or alternative paths
-<span class="cstat-no" title="statement not covered">    packageToInstall = rnPackage;</span>
+<span class="cstat-no" title="statement not covered" >    packageToInstall = rnPackage;</span>
   }
-<span class="cstat-no" title="statement not covered">  return packageToInstall;</span>
+<span class="cstat-no" title="statement not covered" >  return packageToInstall;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function run(root, projectName, options) {</span>
+<span class="fstat-no" title="function not covered" >function run(root, projectName, options) {</span>
   // E.g. '0.38' or '/path/to/archive.tgz'
-<span class="cstat-no" title="statement not covered">  const rnPackage = options.version;</span>
-<span class="cstat-no" title="statement not covered">  const forceNpmClient = options.npm;</span>
-<span class="cstat-no" title="statement not covered">  const yarnVersion = (!forceNpmClient) &amp;&amp; getYarnVersionIfAvailable();</span>
-<span class="cstat-no" title="statement not covered">  var installCommand;</span>
-<span class="cstat-no" title="statement not covered">  if (options.installCommand) {</span>
+<span class="cstat-no" title="statement not covered" >  const rnPackage = options.version;</span>
+<span class="cstat-no" title="statement not covered" >  const forceNpmClient = options.npm;</span>
+<span class="cstat-no" title="statement not covered" >  const yarnVersion = (!forceNpmClient) &amp;&amp; getYarnVersionIfAvailable();</span>
+<span class="cstat-no" title="statement not covered" >  var installCommand;</span>
+<span class="cstat-no" title="statement not covered" >  if (options.installCommand) {</span>
     // In CI environments it can be useful to provide a custom command,
     // to set up and use an offline mirror for installing dependencies, for example.
-<span class="cstat-no" title="statement not covered">    installCommand = options.installCommand;</span>
+<span class="cstat-no" title="statement not covered" >    installCommand = options.installCommand;</span>
   } else {
-<span class="cstat-no" title="statement not covered">    if (yarnVersion) {</span>
-<span class="cstat-no" title="statement not covered">      console.log('Using yarn v' + yarnVersion);</span>
-<span class="cstat-no" title="statement not covered">      console.log('Installing ' + getInstallPackage(rnPackage) + '...');</span>
-<span class="cstat-no" title="statement not covered">      installCommand = 'yarn add ' + getInstallPackage(rnPackage) + ' --exact';</span>
-<span class="cstat-no" title="statement not covered">      if (options.verbose) {</span>
-<span class="cstat-no" title="statement not covered">        installCommand += ' --verbose';</span>
+<span class="cstat-no" title="statement not covered" >    if (yarnVersion) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log('Using yarn v' + yarnVersion);</span>
+<span class="cstat-no" title="statement not covered" >      console.log('Installing ' + getInstallPackage(rnPackage) + '...');</span>
+<span class="cstat-no" title="statement not covered" >      installCommand = 'yarn add ' + getInstallPackage(rnPackage) + ' --exact';</span>
+<span class="cstat-no" title="statement not covered" >      if (options.verbose) {</span>
+<span class="cstat-no" title="statement not covered" >        installCommand += ' --verbose';</span>
       }
     } else {
-<span class="cstat-no" title="statement not covered">      console.log('Installing ' + getInstallPackage(rnPackage) + '...');</span>
-<span class="cstat-no" title="statement not covered">      if (!forceNpmClient) {</span>
-<span class="cstat-no" title="statement not covered">        console.log('Consider installing yarn to make this faster: https://yarnpkg.com');</span>
+<span class="cstat-no" title="statement not covered" >      console.log('Installing ' + getInstallPackage(rnPackage) + '...');</span>
+<span class="cstat-no" title="statement not covered" >      if (!forceNpmClient) {</span>
+<span class="cstat-no" title="statement not covered" >        console.log('Consider installing yarn to make this faster: https://yarnpkg.com');</span>
       }
-<span class="cstat-no" title="statement not covered">      installCommand = 'npm install --save --save-exact ' + getInstallPackage(rnPackage);</span>
-<span class="cstat-no" title="statement not covered">      if (options.verbose) {</span>
-<span class="cstat-no" title="statement not covered">        installCommand += ' --verbose';</span>
+<span class="cstat-no" title="statement not covered" >      installCommand = 'npm install --save --save-exact ' + getInstallPackage(rnPackage);</span>
+<span class="cstat-no" title="statement not covered" >      if (options.verbose) {</span>
+<span class="cstat-no" title="statement not covered" >        installCommand += ' --verbose';</span>
       }
     }
   }
-<span class="cstat-no" title="statement not covered">  try {</span>
-<span class="cstat-no" title="statement not covered">    execSync(installCommand, {stdio: 'inherit'});</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    execSync(installCommand, {stdio: 'inherit'});</span>
   } catch (err) {
-<span class="cstat-no" title="statement not covered">    console.error(err);</span>
-<span class="cstat-no" title="statement not covered">    console.error('Command `' + installCommand + '` failed.');</span>
-<span class="cstat-no" title="statement not covered">    process.exit(1);</span>
+<span class="cstat-no" title="statement not covered" >    console.error(err);</span>
+<span class="cstat-no" title="statement not covered" >    console.error('Command `' + installCommand + '` failed.');</span>
+<span class="cstat-no" title="statement not covered" >    process.exit(1);</span>
   }
-<span class="cstat-no" title="statement not covered">  checkNodeVersion();</span>
-<span class="cstat-no" title="statement not covered">  cli = require(CLI_MODULE_PATH());</span>
-<span class="cstat-no" title="statement not covered">  cli.init(root, projectName);</span>
+<span class="cstat-no" title="statement not covered" >  checkNodeVersion();</span>
+<span class="cstat-no" title="statement not covered" >  cli = require(CLI_MODULE_PATH());</span>
+<span class="cstat-no" title="statement not covered" >  cli.init(root, projectName);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function checkNodeVersion() {</span>
-<span class="cstat-no" title="statement not covered">  var packageJson = require(REACT_NATIVE_PACKAGE_JSON_PATH());</span>
-<span class="cstat-no" title="statement not covered">  if (!packageJson.engines || !packageJson.engines.node) {</span>
-<span class="cstat-no" title="statement not covered">    return;</span>
+<span class="fstat-no" title="function not covered" >function checkNodeVersion() {</span>
+<span class="cstat-no" title="statement not covered" >  var packageJson = require(REACT_NATIVE_PACKAGE_JSON_PATH());</span>
+<span class="cstat-no" title="statement not covered" >  if (!packageJson.engines || !packageJson.engines.node) {</span>
+<span class="cstat-no" title="statement not covered" >    return;</span>
   }
-<span class="cstat-no" title="statement not covered">  if (!semver.satisfies(process.version, packageJson.engines.node)) {</span>
-<span class="cstat-no" title="statement not covered">    console.error(chalk.red(</span>
+<span class="cstat-no" title="statement not covered" >  if (!semver.satisfies(process.version, packageJson.engines.node)) {</span>
+<span class="cstat-no" title="statement not covered" >    console.error(chalk.red(</span>
         'You are currently running Node %s but React Native requires %s. ' +
         'Please use a supported version of Node.\n' +
         'See https://facebook.github.io/react-native/docs/getting-started.html'
@@ -1194,23 +1196,22 @@ var commands = options._;
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function printVersionsAndExit(reactNativePackageJsonPath) {</span>
-<span class="cstat-no" title="statement not covered">  console.log('react-native-cli: ' + require('./package.json').version);</span>
-<span class="cstat-no" title="statement not covered">  try {</span>
-<span class="cstat-no" title="statement not covered">    console.log('react-native: ' + require(reactNativePackageJsonPath).version);</span>
+<span class="fstat-no" title="function not covered" >function printVersionsAndExit(reactNativePackageJsonPath) {</span>
+<span class="cstat-no" title="statement not covered" >  console.log('react-native-cli: ' + require('./package.json').version);</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    console.log('react-native: ' + require(reactNativePackageJsonPath).version);</span>
   } catch (e) {
-<span class="cstat-no" title="statement not covered">    console.log('react-native: n/a - not inside a React Native project directory');</span>
+<span class="cstat-no" title="statement not covered" >    console.log('react-native: n/a - not inside a React Native project directory');</span>
   }
-<span class="cstat-no" title="statement not covered">  process.exit();</span>
+<span class="cstat-no" title="statement not covered" >  process.exit();</span>
 }
 &nbsp;
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 20:35:07 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 17:55:38 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
