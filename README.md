@@ -1,7 +1,10 @@
-# test coverage for  [react-native-cli (v2.0.1)](https://github.com/facebook/react-native#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-react-native-cli.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-react-native-cli) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-react-native-cli.svg)](https://travis-ci.org/npmtest/node-npmtest-react-native-cli)
+# npmtest-react-native-cli
+
+#### test coverage for  [react-native-cli (v2.0.1)](https://github.com/facebook/react-native#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-react-native-cli.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-react-native-cli) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-react-native-cli.svg)](https://travis-ci.org/npmtest/node-npmtest-react-native-cli)
+
 #### The React Native CLI tools
 
-[![NPM](https://nodei.co/npm/react-native-cli.png?downloads=true)](https://www.npmjs.com/package/react-native-cli)
+[![NPM](https://nodei.co/npm/react-native-cli.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/react-native-cli)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-react-native-cli/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-react-native-cli/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-react-native-cli/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-react-native-cli/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-react-native-cli/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-react-native-cli/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-react-native-cli/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-react-native-cli/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-react-native-cli/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-react-native-cli/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-react-native-cli%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-react-native-cli/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-react-native-cli/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-react-native-cli/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-react-native-cli/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-react-native-cli%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-react-native-cli/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-react-native-cli/build/test-report.html](https://npmtest.github.io/node-npmtest-react-native-cli/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-react-native-cli/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-react-native-cli/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-react-native-cli/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-react-native-cli/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-react-native-cli/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-react-native-cli/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-react-native-cli/build/screenCapture.npmPackageListing.svg)
 
@@ -53,37 +62,29 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "amasad",
-            "email": "amjad.masad@gmail.com"
+            "name": "amasad"
         },
         {
-            "name": "bestander",
-            "email": "bestander@gmail.com"
+            "name": "bestander"
         },
         {
-            "name": "fb",
-            "email": "opensource+npm@fb.com"
+            "name": "fb"
         },
         {
-            "name": "frantic",
-            "email": "alex.frantic@gmail.com"
+            "name": "frantic"
         },
         {
-            "name": "mkonicek",
-            "email": "martin.konicek@gmail.com"
+            "name": "mkonicek"
         },
         {
-            "name": "spicyj",
-            "email": "ben@benalpert.com"
+            "name": "spicyj"
         },
         {
-            "name": "vjeux",
-            "email": "vjeuxx@gmail.com"
+            "name": "vjeux"
         }
     ],
     "name": "react-native-cli",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/facebook/react-native.git"
